@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+header, footer {
+    background: url("bits/pattern.svg") repeat scroll 0 0 #222;
+    color: #fff;
+    padding-bottom: 1px;
+}
+header:after {
+    width:100%;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    left: 0;
+    content: '';
+    background: linear-gradient(to right, #3E4038 0, #6FBF93 33%, #277F7C 66%, #FFF 100%);
+}
+#header_anim {
+    background-image: radial-gradient(circle farthest-side at center center , rgba(0, 0, 0, 0) 25%, rgba(6, 19, 18, 0.9) 100%);
+    position: relative;
+    top: 0;
+}
+h1 {
+    color: #ddd;
+    font-family: 'Dancing Script', cursive;
+    font-size: 90px;
+    font-weight: 400;
+    margin: 0;
+    padding: 32px 16px;
+    text-align: center;
+}
+h2, h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    padding: 16px;
+}
+h2 {
+    text-transform: uppercase;
+}
+p, ul {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 28em;
+    margin: 16px;
+}
+li {
+    margin-bottom: 8px;
+}
+strong {
+    color: #ff512f;
+    font-weight: bold;
+}
+@media(min-width:600px) {
+    #header_anim { height: 345px; }
+    h1 { font-size: 110px; padding-top: 110px; }
+}
