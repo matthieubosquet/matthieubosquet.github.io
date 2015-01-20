@@ -61,9 +61,11 @@ $ bower update
 {% endhighlight %}
 <p>Use the component's attributes in template {{attribute-name}}</p>
 {% highlight html %}
+{% raw %}
 <template>
     <p style="color:{{color}};">This text has my favourite color.</p>
 </template>
+{% endraw %}
 {% endhighlight %}
 <p>Specify default values in the created callback (ensure separate instances)</p>
 {% highlight html %}
