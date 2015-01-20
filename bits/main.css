@@ -65,7 +65,7 @@ pre {
     font-family: 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 16px;
     margin: 16px;
-    max-width: 750px;
+    max-width: 56em;
     overflow-x: auto;
     padding: 8px;
     width: auto;
@@ -110,4 +110,9 @@ pre {
 }
 @media(min-width:655px) {
     h1 { font-size: 110px; padding-top: 110px; }
+}
+@media(min-width:1024px) {
+    h1 { font-size: 138px; }
+    h2, h3 { font-size: 35px; }
+    p, ul, pre { font-size: 20px; }
 }
