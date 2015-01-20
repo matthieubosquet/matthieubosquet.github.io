@@ -95,6 +95,12 @@
         mouse_x = event.clientX;
         mouse_y = event.clientY - canvas_container.getBoundingClientRect().top;
     }
+    function touchMove(event) {
+        event.preventDefault();
+        var touches = event.changedTouches;
+        mouse_x = touches[0].pageX;
+        mouse_y = touches[0].pageY - canvas_container.getBoundingClientRect().top;
+    }
     function onDown() {
         mouse_active = true;
     }
@@ -170,8 +176,10 @@
     canvas.addEventListener('mouseover', mouseOver, false);
     canvas.addEventListener('mouseout', mouseOut, false);
     canvas.addEventListener('mousemove', mouseMove, false);
+    canvas.addEventListener('touchmove', touchMove, false);
     canvas.addEventListener('mousedown', onDown, false);
     canvas.addEventListener('mouseup', onUp, false);
+    canvas.addEventListener('touchleave', onUp, false);
     canvas_container.appendChild(canvas);
 
 })();
