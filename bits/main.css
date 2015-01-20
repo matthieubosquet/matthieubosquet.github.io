@@ -1,10 +1,13 @@
 body {
     margin: 0;
 }
-header, footer {
-    background: url("bits/pattern.svg") repeat scroll 0 0 #222;
+header, footer, #home {
+    background: url("/bits/pattern.svg") repeat scroll 0 0 #222;
     color: #fff;
     padding-bottom: 1px;
+}
+header a, footer a, #home a {
+    color: #78B5F3;
 }
 header:after {
     width:100%;
@@ -54,7 +57,53 @@ strong {
     color: #ff512f;
     font-weight: bold;
 }
-@media(min-width:530px) {
+pre {
+    background: #171516;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #d7d7d7;
+    font-family: 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 16px;
+    margin: 16px;
+    max-width: 750px;
+    overflow-x: auto;
+    padding: 8px;
+    width: auto;
+}
+#home article {
+    padding: 32px 0;
+}
+#menu {
+    left: 0;
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 1px 0 0 16px;
+    position: absolute;
+    top: 0;
+}
+#menu li {
+    display: block;
+    margin: 0;
+}
+#menu a {
+    border-bottom: 3px solid rgba(255,81,47,0);
+    color: #ddd;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 0 10px;
+    text-decoration: none;
+}
+#menu a:hover {
+    border-bottom-color: rgba(120,181,243,1);
+}
+#linux_toolbox h1 {
+    padding: 64px 0 32px 64px;
+}
+.definition strong {
+    color: #fff;
+}
+.definition span {
+    display: block;
 }
 @media(min-width:655px) {
     h1 { font-size: 110px; padding-top: 110px; }

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
     <meta name="theme-color" content="#3E4038">
-    <link rel="icon" sizes="192x192" href="neiges_icon.png">
+    <link rel="icon" sizes="192x192" href="/neiges_icon.png">
 
     <link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
 
@@ -33,7 +33,7 @@
         }
     </style>
 
-    <link rel="stylesheet" media="screen" href="bits/cv.css" />
+    <link rel="stylesheet" media="screen" href="/bits/main.css" />
 
     <title>Hire Matth! A good web developer.</title>
 
@@ -97,7 +97,7 @@ Matthieubosquet@gmail.com
         </p>
         <h3>What do I want to do?</h3>
         <p>
-            I want to work with web components. I have no doubt it is the future of web development. And if your project has to do with learning (publishing, podcasts, journalism, education, science...), there is a good chance I will be interested. Please don't hesitate to get in touch! I'll call or write you back as soon as possible.
+        I want to work with <strong>web components</strong>. I have no doubt it is the future of web development. And if your project has to do with learning (publishing, podcasts, journalism, education, science...), there is a good chance I will be interested. Please don't hesitate to get in touch! I'll call or write you back as soon as possible.
         </p>
     </article>
 
@@ -111,7 +111,7 @@ Matthieubosquet@gmail.com
     <script type="text/javascript">
 (function(){
 
-    var COUNT = 29;
+    var entities = 29;
     var header_anim = document.querySelector('#header_anim');
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
@@ -225,7 +225,7 @@ Matthieubosquet@gmail.com
     }
 
     var cells = [], cell;
-    for (i = 0; i < COUNT; i++){
+    for (i = 0; i < entities; i++){
         cell = new Cell();
         cell.reset();
         cells.push(cell);
@@ -235,7 +235,7 @@ Matthieubosquet@gmail.com
 
         var time = new Date().getTime() * 0.0008;
 
-        for (i = 0; i < COUNT; i++) {
+        for (i = 0; i < entities; i++) {
             cell = cells[i];
             cell.x = Math.sin( time ) * Math.cos( time * cell.vx ) * ( (width-96)/2 ) + width*cell.vy;
             cell.y = Math.cos( time * cell.vy ) * 96 + ( 256 * cell.vy );

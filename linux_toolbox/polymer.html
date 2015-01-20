@@ -1,0 +1,108 @@
+---
+title: Polymer
+layout: linux_toolbox
+---
+<h2>Install</h2>
+<h3>Base</h3>
+<p>Install node, npm (node package manager) and git</p>
+{% highlight bash %}
+$ apt-get install node npm git
+{% endhighlight %}
+<p>Install bower globally (-g to be able to run the command from terminal)</p>
+{% highlight bash %}
+$ npm install -g bower
+{% endhighlight %}
+<p>Initialise my project with bower to handle dependencies (bower.json config file)</p>
+{% highlight bash %}
+$ bower init
+{% endhighlight %}
+<p>Install polymer for this project and save this dependency in config</p>
+{% highlight bash %}
+$ bower install Polymer/polymer --save
+{% endhighlight %}
+<p>Dependencies are fetched in the bower_components folder it can be deleted and re-installed later with</p>
+{% highlight bash %}
+$ bower install
+{% endhighlight %}
+<h3>Extras</h3>
+<p>Polymer core elements</p>
+{% highlight bash %}
+$ bower install Polymer/core-elements
+{% endhighlight %}
+<p>Polymer paper elements</p>
+{% highlight bash %}
+$ bower install Polymer/paper-elements
+{% endhighlight %}
+
+<h2>Update</h2>
+{% highlight bash %}
+$ bower update
+{% endhighlight %}
+
+<h2>Components</h2>
+<p>Include webcomponents.min.js for polyfills (top of head)</p>
+{% highlight html %}
+<script src="/bower_components/webcomponentsjs/webcomponents.min.js"></script>
+{% endhighlight %}
+<p>Import all components needed (in head)</p>
+{% highlight html %}
+<link rel="import" href="/components/my-component.html">
+{% endhighlight %}
+<p>Use the new tags (in body)</p>
+{% highlight html %}
+<my-component></mycomponent>
+{% endhighlight %}
+
+<h2>Polymer sugaring</h2>
+<h3>Public API</h3>
+<p>Declare the component's Public API via attributes</p>
+{% highlight html %}
+<polymer-element name="my-component" attributes="color">
+{% endhighlight %}
+<p>Use the component's attributes in template {{attribute-name}}</p>
+{% highlight html %}
+<template>
+    <p style="color:{{color}};">This text has my favourite color.</p>
+</template>
+{% endhighlight %}
+<p>Specify default values in the created callback (ensure separate instances)</p>
+{% highlight html %}
+{% raw %}
+<polymer-element name="my-component" attributes="name settings">
+<template>
+<p style="color:{{settings.color}};">This text has {{name}} <strong style="font-size:{{settings.size}};">favourite color!</strong></p>
+<script>
+    Polymer({
+        created: function() {
+            this.name = 'my';
+            this.settings = {
+                color: 'green',
+                size: '40px'
+            };
+        }
+    });
+</script>
+</polymer-element>
+{% endraw %}
+{% endhighlight %}
+<p>Configure the attributes when using the component</p>
+{% highlight html %}
+<my-component name="jon" settings='{ "color": "red", "size": "20px" }'></my-component>
+<p>Hint types with default values it type is not String (important for data-binding)</p>
+<script>
+created: function() {
+    this.isReady = false; // Initialize and hint type to be a boolean.
+    this.count = 0; // Initialize and hint type to be a number.
+    this.list = []; // Initialize and hint type to be array.
+    this.person = {}; // Initialize and hint type to an object.
+}
+</script>
+<p>Use IDs map ($.id) to reference nodes in script</p>
+<script>
+    Polymer({
+        setFocus: function() {
+            this.$.inputId.focus();
+        }
+    });
+</script>
+{% endhighlight %}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Matthieu Bosquet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <meta name="theme-color" content="#3E4038">
+    <link rel="icon" sizes="192x192" href="/neiges_icon.png">
+
+    <link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+
+    {% include dancing_font.html %}
+
+    <link rel="stylesheet" media="screen" href="/bits/main.css" />
+
+    <title>neiges | {{ page.title }}</title>
+
+</head>
+<body id="{{page.id}}">
+
+    <header>
+        <h1>neiges</h1>
+        <p class="definition"><strong>neige</strong> <abbr title="feminine gender">f</abbr> (plural neiges) <span>snow, crystalline frozen precipitation.</span></p>
+    </header>
+
+    <article>
+        {{ content }}
+    </article>
+
+    {% include footer.html %}
+
+    <script type="text/javascript">
+(function () {
+
+    var entities = 100;
+    var canvas_container = document.querySelector('header');
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    var width = canvas_container.clientWidth;
+    var height = canvas_container.clientHeight;
+    var i = 0;
+    var active = false;
+    var amplitude = 130;
+    var mouse_active = false;
+    var mouse_over = false;
+    var mouse_x = 0;
+    var mouse_y = 0;
+    canvas.style.position = 'absolute';
+    canvas.style.top = canvas.style.left = '0';
+
+    function onResize() {
+        width = canvas_container.clientWidth;
+        height = canvas_container.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
+        var wasActive = active;
+        active = width > 520;
+        if (!wasActive && active)
+            requestAnimFrame(draw);
+    }
+
+    var Snowflake = function () {
+        this.x = 0;
+        this.y = 0;
+        this.vy = 0;
+        this.vx = 0;
+        this.r = 0;
+        this.reset();
+    }
+    Snowflake.prototype.reset = function() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * -height;
+        this.vy = 0.6 + Math.random() * 2;
+        this.vx = 0.5 - Math.random();
+        this.r = 1.2 + Math.random() * 2;
+        this.o = this.vy - 0.3;
+    }
+    var snowflakes = [], snowflake;
+    for (i = 0; i < entities; i++) {
+        snowflake = new Snowflake();
+        snowflake.reset();
+        snowflakes.push(snowflake);
+    }
+
+    function mouseOver() {
+        mouse_over = true;
+    }
+    function mouseOut() {
+        mouse_over = false;
+    }
+    function mouseMove(event) {
+        mouse_x = event.clientX;
+        mouse_y = event.clientY - canvas_container.getBoundingClientRect().top;
+    }
+    function onDown() {
+        mouse_active = true;
+    }
+    function onUp() {
+        mouse_active = false;
+    }
+    function gravityStatus() {
+        ctx.fillStyle = 'rgba(255,255,255,1)';
+        ctx.font = '16px Arial, sans-serif';
+        ctx.Align = 'right';
+        ctx.textBaseLine = 'top';
+        if (mouse_active) {
+            ctx.fillText('Gravity field ON', width-140, height-20);
+        }
+        else {
+            ctx.fillText('Gravity field OFF', width-140, height-20);
+        }
+    }
+
+
+    function draw() {
+
+        var time = new Date().getTime() * 0.006;
+        var z_axis = 0;
+
+        ctx.clearRect(0, 0, width, height);
+
+        if (!active)
+            return;
+
+        for (i = 0; i < entities; i++) {
+            snowflake = snowflakes[i];
+            z_axis = 0;
+            if (mouse_over && mouse_active) {
+                if (snowflake.y < mouse_y+amplitude && snowflake.y > mouse_y-amplitude && snowflake.x < mouse_x+amplitude && snowflake.x > mouse_x-amplitude) {
+                    snowflake.x += Math.sin(time)*3 + (mouse_x-snowflake.x)/70;
+                    snowflake.y += Math.cos(time)*snowflake.vy + (mouse_y-snowflake.y)/70 - snowflake.vy*0.7;
+                     z_axis = Math.sin(time);
+                }
+                else
+                    snowflake.x += snowflake.vx*0.7;
+                    snowflake.y += snowflake.vy;
+            }
+            else {
+                snowflake.x += snowflake.vx;
+                snowflake.y += snowflake.vy;
+            }
+            ctx.fillStyle = 'rgba(255, 255, 255, '+snowflake.o+')';
+            ctx.beginPath();
+            ctx.arc(snowflake.x, snowflake.y, snowflake.r+z_axis, 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.fill();
+            if (snowflake.y > height)
+                snowflake.reset();
+        }
+
+        gravityStatus();
+
+        requestAnimFrame(draw);
+    }
+
+    window.requestAnimFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               function( callback ){
+                   window.setTimeout(callback, 1000 / 60);
+               };
+    })();
+
+    onResize();
+    window.addEventListener('resize', onResize, false);
+    canvas.addEventListener('mouseover', mouseOver, false);
+    canvas.addEventListener('mouseout', mouseOut, false);
+    canvas.addEventListener('mousemove', mouseMove, false);
+    canvas.addEventListener('mousedown', onDown, false);
+    canvas.addEventListener('mouseup', onUp, false);
+    canvas_container.appendChild(canvas);
+
+})();
+    </script>
+
+    {% include analytics.html %}
+
+</body>
+
+</html>
