@@ -45,7 +45,6 @@
     var active = false;
     var amplitude = 130;
     var mouse_active = false;
-    var mouse_over = false;
     var mouse_x = 0;
     var mouse_y = 0;
     canvas.style.position = 'absolute';
@@ -85,12 +84,6 @@
         snowflakes.push(snowflake);
     }
 
-    function mouseOver() {
-        mouse_over = true;
-    }
-    function mouseOut() {
-        mouse_over = false;
-    }
     function mouseMove(event) {
         mouse_x = event.clientX;
         mouse_y = event.clientY - canvas_container.getBoundingClientRect().top;
@@ -101,10 +94,14 @@
         mouse_x = touches[0].pageX;
         mouse_y = touches[0].pageY - canvas_container.getBoundingClientRect().top;
     }
-    function onDown() {
+    function mouseDown() {
         mouse_active = true;
     }
-    function onUp() {
+    function touchStart(event) {
+        touchMove(event);
+        mouse_active = true;
+    }
+    function gravityOff() {
         mouse_active = false;
     }
     function gravityStatus() {
@@ -134,7 +131,7 @@
         for (i = 0; i < entities; i++) {
             snowflake = snowflakes[i];
             z_axis = 0;
-            if (mouse_over && mouse_active) {
+            if (mouse_active) {
                 if (snowflake.y < mouse_y+amplitude && snowflake.y > mouse_y-amplitude && snowflake.x < mouse_x+amplitude && snowflake.x > mouse_x-amplitude) {
                     snowflake.x += Math.sin(time)*3 + (mouse_x-snowflake.x)/70;
                     snowflake.y += Math.cos(time)*snowflake.vy + (mouse_y-snowflake.y)/70 - snowflake.vy*0.7;
@@ -173,13 +170,14 @@
 
     onResize();
     window.addEventListener('resize', onResize, false);
-    canvas.addEventListener('mouseover', mouseOver, false);
-    canvas.addEventListener('mouseout', mouseOut, false);
+    canvas.addEventListener('mousedown', mouseDown, false);
+    canvas.addEventListener('touchstart', touchStart, false);
     canvas.addEventListener('mousemove', mouseMove, false);
     canvas.addEventListener('touchmove', touchMove, false);
-    canvas.addEventListener('mousedown', onDown, false);
-    canvas.addEventListener('mouseup', onUp, false);
-    canvas.addEventListener('touchleave', onUp, false);
+    canvas.addEventListener('mouseup', gravityOff, false);
+    canvas.addEventListener('touchleave', gravityOff, false);
+    canvas.addEventListener('touchcancel', gravityOff, false);
+    canvas.addEventListener('touchend', gravityOff, false);
     canvas_container.appendChild(canvas);
 
 })();
