@@ -5,6 +5,8 @@ layout: linux_toolbox
 <h2>Install</h2>
 {% highlight bash %}
 $ apt-get install git
+$ git config --global user.name "jon coucou"
+$ git config --global user.email "joncoucou@coucoucorp.com"
 {% endhighlight %}
 
 <h2>Set up a Git repo</h2>
@@ -17,7 +19,19 @@ $ git commit -m "A project about bla bla."
 <h2>Github</h2>
 <h3>New repo</h3>
 <p>1. Create a new repository from github.com.</p>
-<p>2. Add origin and push to repo.</p>
+<p>2. Initialize project locally (here with MIT License for code, look at Creative Commons NonCommercial ShareAlike for content and investigate options).</p>
+{% highlight bash %}
+$ mkdir project_bla && cd project_bla
+$ printf "# project bla\n\nA great punchline explaining the purpose of project bla." > README.md
+$ curl -o LICENSE.md https://raw.githubusercontent.com/matthieubosquet/templates/master/License_MIT
+$ sed -i 's/\[year\]/2015/' LICENSE.md
+$ sed -i 's/\[fullname\]/Jon Coucou/' LICENSE.md
+$ printf "*~\n*.swp\n*.swo" > .gitignore
+$ git init
+$ git add -A
+$ git commit -m "Project bla initialized"
+{% endhighlight %}
+<p>3. Add origin and push to repo.</p>
 {% highlight bash %}
 $ git remote add origin <REPOSITORY_URL>
 $ git push origin master
