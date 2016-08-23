@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#3E4038">
+    <link rel="icon" sizes="192x192" href="/favicon.png">
+
+    <style>
+        body { margin: 0; padding: 15px; }
+        h1 { font-family: "DejaVu Serif", serif; font-size: 32px; }
+        .song { font-family: ubuntu, sans-serif; font-size: 16px; }
+        .chorus { padding-left: 15px; }
+        .line, .sentence { display: block; }
+        .line { padding-top: 1em; width: 27em; }
+        .chord { display: inline-block; font-size: 14px; font-weight: bold; }
+        .line .chord { position: relative; top: -1.1em; width: 0; }
+        .artist { font-family: "DejaVu Serif", serif; font-style: italic; margin-top: 2em; }
+        @media print {
+            @page { size: A4 landscape; }
+            body { width: 100%; }
+            h1 { font-size: 24px; }
+            .song { -moz-column-count: 3; -webkit-column-count: 2; columns: 3; font-size: 12px; }
+            .chord { font-size: 11px; }
+        }
+    </style>
+
+    <title>{{ page.title }}</title>
+
+</head>
+<body>
+
+{{ content }}
+
+</body>
+
+</html>
