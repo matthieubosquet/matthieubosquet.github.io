@@ -1,8 +1,8 @@
 ---
-layout: code
 permalink: /code/node-js-basics/
 title: Node.js 101
-path: /code/node-js-basics.md
+category:
+- programming
 tags:
 - node.js
 - javascript

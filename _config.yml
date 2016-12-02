@@ -6,4 +6,5 @@ email: 'matthieubosquet@gmail.com'
 collections:
   code:
     output: true
+    layout: home
 

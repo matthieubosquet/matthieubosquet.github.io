@@ -1,8 +1,8 @@
 ---
-layout: code
 permalink: /code/structure-of-a-project/
 title: Structure of a project
-path: /code/structure-of-a-project.md
+category:
+- programming
 tags:
 - template
 ---
