@@ -1,0 +1,9 @@
+# Global site config
+title: 'Matthieu Bosquet'
+email: 'matthieubosquet@gmail.com'
+
+# Collections (documents sharing a namespace and properties)
+collections:
+  code:
+    output: true
+

@@ -3,6 +3,14 @@ title: html
 layout: linux_toolbox
 ---
 
+To access user snippets, go to Code > Preferences > User Snippets and add the content to the relevant language.
+
+The "prefix" field indicates the sequence of characters allowing to trigger the snippet in vscode.
+
+The "body" field defines the snippet.
+
+The "description" is shown in the editor when the snippet is active.
+
 <h2>html.json</h2>
 {% highlight json %}
 {
@@ -12,18 +20,48 @@ layout: linux_toolbox
 			"<!doctype html>",
 			"<html>",
 			"<head>",
-    		"<meta charset=\"utf-8\">",
-    		"<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">",
-    		"<meta name=\"viewport\" content=\"width=device-width\">",
-    		"<meta name=\"theme-color\" content=\"#3E4038\">",
-    		"<link rel=\"icon\" sizes=\"192x192\" href=\"/favicon.png\">",
+			"    <meta charset=\"utf-8\">",
+			"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">",
+			"    <meta name=\"author\" content=\"Matthieu Bosquet\" />",
+			"    <meta name=\"viewport\" content=\"width=device-width\">",
+			"    <meta name=\"theme-color\" content=\"#3E4038\">",
+			"",
+			"    <style type=\"text/css\">",
+			"    /** Here goes google font imports **/",
+			"    </style>",
+			"",
+			"    <link rel=\"icon\" sizes=\"192x192\" href=\"/favicon.png\">",
+			"    <link rel=\"stylesheet\" media=\"screen\" href=\"/css/neiges.css\">",
+			"",
+			"    <meta name=\"description\" content=\"\">",
+			"    <title></title>",
 			"</head>",
 			"<body>",
-    		"<header>",
+			"    <script src=\"/js/main.js\"></script>",
+			"    <script type=\"text/javascript\">",
+			"    /* Here goes analytics code */ ",
+			"    </script>",
 			"</body>",
 			"</html>"
 		],
 		"description": "The basic html document"
 	}
+}
+{% endhighlight %}
+
+<h2>javascript.json</h2>
+
+{% highlight json %}
+{
+	"Service worker": {
+		"prefix": "service",
+		"body": [
+			"if ('serviceWorker' in navigator) {",
+			"    navigator.serviceWorker.register('/sw.js', {scope: '/'});",
+			"}"
+		],
+		"description": "Register a service worker 'sw.js' if the browser supports it. This service worker will control everything from the root of the domain (default scope is './')."
+	}
+
 }
 {% endhighlight %}
