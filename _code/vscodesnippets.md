@@ -29,8 +29,11 @@ tags:
 ### html.json
 
 {% highlight json %}
-{% gist matthieubosquet/b2eb55a7965c46bcf9b655aa348056af html.json %}
+{ test: 'test' }
 {% endhighlight %}
+
+{% gist matthieubosquet/b2eb55a7965c46bcf9b655aa348056af html.json %}
+
 
 ### javascript.json
 
