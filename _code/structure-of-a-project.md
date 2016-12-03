@@ -30,6 +30,7 @@ Contains license of choice with appropriate copyright notice.
 ## Project dotfiles
 
 **.editorconfig**
+
 ```yaml
 # Editor configuration for consistent coding styles
 

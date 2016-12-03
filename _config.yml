@@ -3,6 +3,7 @@ title: "neiges"
 author: "Matthieu Bosquet"
 email: "matthieubosquet@gmail.com"
 description: "I'm a creative web developer, some things I like should end up here ;)"
+google_analytics_tracking_id: UA-20728275-2
 
 # Collections (documents sharing a namespace and properties)
 collections:
