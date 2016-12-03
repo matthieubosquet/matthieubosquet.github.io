@@ -11,7 +11,7 @@ tags:
   - chords
 ---
 
-## Web development personal reference
+## Chords
 
 <ul>
   {% for page in site.chords %}

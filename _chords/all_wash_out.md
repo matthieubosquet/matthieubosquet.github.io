@@ -1,5 +1,5 @@
 ---
-permalink: /chords/all_wash_out/
+permalink: /chords/all-wash-out/
 title: All wash out - Edward Sharpe and the Magnetic Zeros, 2012
 tags:
   - Edward Sharpe
