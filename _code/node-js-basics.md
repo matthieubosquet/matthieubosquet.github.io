@@ -2,8 +2,7 @@
 permalink: /code/node_js_basics
 title: Node.js 101
 description: ...or how to set up a node project.
-category:
-  - programming
+category: programming
 tags:
   - node.js
   - javascript

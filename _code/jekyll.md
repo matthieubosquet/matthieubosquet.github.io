@@ -2,8 +2,7 @@
 permalink: /code/jekyll
 title: Github pages 101
 description: ...or how to host a static website for free!
-category:
-  - programming
+category: programming
 tags:
   - jekyll
   - github

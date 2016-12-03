@@ -3,8 +3,7 @@ permalink: /chords/
 layout: chords
 title: Chords
 description: ...or some tabs I enjoy on the guitar. I love music <3.
-category:
-  - music
+category: music
 tags:
   - guitar
   - tablatures

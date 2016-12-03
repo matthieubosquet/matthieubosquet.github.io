@@ -2,8 +2,7 @@
 permalink: /
 layout: default
 title: Home
-category:
-  - index
+category: index
 tags:
   - programming
   - music
