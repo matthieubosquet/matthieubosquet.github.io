@@ -1,7 +1,14 @@
 ---
-title: Git
-layout: default
+permalink: /code/git
+title: Git 101
+description: An introduction to git.
+category: programming
+tags:
+  - programming
+  - git
+  - version control
 ---
+
 <h2>Install</h2>
 {% highlight bash %}
 $ apt-get install git

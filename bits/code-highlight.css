@@ -1,0 +1,15 @@
+/* Base Style */
+.highlight pre { color: #dfe3f8; background-color: #232527; padding: 1.8em 2em; }
+/* Keyword Declaration */
+.highlight .k, .highlight .kd, .highlight .kc { color: #7db4db; }
+/* Names */
+.highlight .n, .highlight .nt, .highlight .nx { color: #dc4747; }
+/* Name attributes */
+.highlight .na { color: #f7ba77; }
+/* Literal String & Number */
+.highlight .s { color: #edebf2; }
+.highlight .s1, .highlight .m, .highlight .mi, .highlight .mf { color: #ebd894; }
+/* Comments  */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cp, .highlight .cs { color: #9798a2; font-style: italic; }
+/* Error */
+.highlight .err { color: #cccccc; border: 1px solid #FF0000; }

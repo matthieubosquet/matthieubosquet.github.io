@@ -1,7 +1,14 @@
 ---
+permalink: /code/vim
 title: Vim
-layout: default
+description: What to do with vim?
+category: programming
+tags:
+  - programming
+  - vim
+  - bash
 ---
+
 <h2>Install</h2>
 <p>Install vim-gtk for easy X copy</p>
 {% highlight bash %}

@@ -4,6 +4,7 @@ title: Structure of a project
 description: ...or an opiniated template for code repository.
 category: programming
 tags:
+  - programming
   - project template
   - best practice
 ---

@@ -1,7 +1,13 @@
 ---
-title: docker
-layout: default
+permalink: /code/structure_of_a_project
+title: Docker
+description: ...an introduction to Docker.
+category: programming
+tags:
+  - programming
+  - docker
 ---
+
 <p>Easy setup of development environment (Database, Server, Compilation ...). Much faster than virtual machines.</p>
 <p><a href="https://docs.docker.com/reference/commandline/cli/">Docker command line reference</a></p>
 

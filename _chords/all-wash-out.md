@@ -2,6 +2,8 @@
 permalink: /chords/all_wash_out
 title: All wash out - Edward Sharpe and the Magnetic Zeros, 2012
 tags:
+  - music
+  - tablature
   - Edward Sharpe
 ---
 

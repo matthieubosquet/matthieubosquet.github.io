@@ -2,8 +2,7 @@
 permalink: /code/
 layout: code
 title: Code
-category:
-  - programming
+category: programming
 ---
 
 ## Web development personal reference
@@ -15,3 +14,6 @@ category:
   </li>
   {% endfor %}
 </ul>
+
+<p>n.b. Shell commands for ubuntu</p>
+<p>n.b. Commands like apt-get and docker need sudo, I omitted it for readability</p>

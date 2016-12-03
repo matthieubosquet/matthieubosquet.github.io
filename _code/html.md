@@ -1,7 +1,13 @@
 ---
-title: html
-layout: default
+permalink: /code/html
+title: HTML Basics
+description: Opiniated html template.
+category: programming
+tags:
+  - programming
+  - html
 ---
+
 <h2>html5 document</h2>
 {% highlight html %}
 <!doctype html>

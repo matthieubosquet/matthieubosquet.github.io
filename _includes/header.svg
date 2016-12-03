@@ -1,0 +1,35 @@
+
+<svg width="526px" height="530px" viewBox="-58 -60 526 530" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="96.4172801%" fx="50%" fy="96.4172801%" r="86.2242566%" id="radialGradient-1">
+            <stop stop-color="#236BB3" offset="0%"></stop>
+            <stop stop-color="#4C4C4C" offset="100%"></stop>
+        </radialGradient>
+        <polygon id="path-2" points="204.5 82 309 143.75 309 267.25 204.5 329 100 267.25 100 143.75"></polygon>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="209" height="247" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <linearGradient x1="0%" y1="74.6808766%" x2="100%" y2="74.6808767%" id="linearGradient-4">
+            <stop stop-color="#6BB38F" offset="0%"></stop>
+            <stop stop-color="#737373" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-5" points="205 10 370 107.5 370 302.5 205 400 40 302.5 40 107.5"></polygon>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="330" height="390" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="121.265375%" id="radialGradient-7">
+            <stop stop-color="#CC2828" offset="0%"></stop>
+            <stop stop-color="#999999" offset="100%"></stop>
+        </radialGradient>
+        <polygon id="path-8" points="205 10 370 107.5 370 302.5 205 400 40 302.5 40 107.5"></polygon>
+    </defs>
+    <use id="Blue-hexagon-Copy" stroke="url(#radialGradient-1)" mask="url(#mask-3)" stroke-width="12" fill="none" transform="translate(204.500000, 205.500000) rotate(20.000000) translate(-204.500000, -205.500000) " xlink:href="#path-2"></use>
+    <use id="Green-hexagon" stroke="url(#linearGradient-4)" mask="url(#mask-6)" stroke-width="18" fill="none" transform="translate(205.000000, 205.000000) rotate(30.000000) translate(-205.000000, -205.000000) " xlink:href="#path-5"></use>
+    <g id="Red-hexagon" stroke="none" fill="none">
+        <use stroke="url(#radialGradient-7)" stroke-width="12" xlink:href="#path-8"></use>
+        <use stroke="#FFFFFF" stroke-width="1" xlink:href="#path-8"></use>
+    </g>
+
+</svg>
