@@ -1,5 +1,5 @@
 ---
-permalink: /code/node_js_basics
+permalink: /code/jekyll
 title: Github pages 101
 description: ...or how to host a static website for free!
 category:
