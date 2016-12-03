@@ -1,7 +1,7 @@
 ---
-permalink: /code/structure-of-a-project/
+permalink: /code/structure_of_a_project
 title: Structure of a project
-description: ...or an opiniated template for code.
+description: ...or an opiniated template for code repository.
 category:
   - programming
 tags:

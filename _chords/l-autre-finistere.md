@@ -1,5 +1,5 @@
 ---
-permalink: /chords/l_autre_finistere/
+permalink: /chords/l_autre_finistere
 title: L'Autre Finistère - Les Innocents, 1992
 tags:
   - Les Innocents

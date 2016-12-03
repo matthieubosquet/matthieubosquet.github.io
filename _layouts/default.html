@@ -10,6 +10,10 @@
 
     <link rel="icon" sizes="192x192" href="/favicon.png">
     <link rel="stylesheet" media="screen" href="/bits/neiges.css">
+    {% if page.category == "programming" %}
+    <link rel="stylesheet" media="screen" href="/bits/syntax.css">
+    {%endif %}
+
 
     <title>{{ site.title }} - {{ page.title }}</title>
     <meta name="author" content="{{ site.author }}" />

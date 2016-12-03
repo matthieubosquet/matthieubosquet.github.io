@@ -1,5 +1,5 @@
 ---
-permalink: /chords/science_fiction_double_feature/
+permalink: /chords/science_fiction_double_feature
 title: Science Fiction/Double Feature - Richard O'Brien (The Rocky Horror Show), 1973
 tags:
   - Rocky horror picture show

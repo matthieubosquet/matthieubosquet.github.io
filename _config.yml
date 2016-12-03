@@ -10,6 +10,8 @@ google_analytics_tracking_id: UA-20728275-2
 collections:
   code:
     output: true
+  chords:
+    output: true
 
 # Defaults (scoped defaults type point to a namespace, values overrides global defaults)
 defaults:
