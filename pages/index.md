@@ -1,7 +1,15 @@
 ---
+permalink: /
 layout: default
 title: Home
+category:
+  - index
+tags:
+  - programming
+  - music
+  - experiments
 ---
+
 <ul>
     <li><a href="/linux_toolbox/">Linux toolbox</a> A handy reference</li>
     <li><a href="https://github.com/matthieubosquet">Github</a> My github account</li>

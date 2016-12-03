@@ -1,10 +1,12 @@
 ---
 permalink: /code/structure-of-a-project/
 title: Structure of a project
+description: ...or an opiniated template for code.
 category:
-- programming
+  - programming
 tags:
-- template
+  - project template
+  - best practice
 ---
 
 ## Project files

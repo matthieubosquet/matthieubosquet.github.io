@@ -1,4 +1,5 @@
 # Global site config
+lang: en
 title: "neiges"
 author: "Matthieu Bosquet"
 email: "matthieubosquet@gmail.com"
@@ -10,7 +11,7 @@ collections:
   code:
     output: true
 
-# Defaults (scoped defaults)
+# Defaults (scoped defaults type point to a namespace, values overrides global defaults)
 defaults:
   -
     scope:
@@ -24,3 +25,17 @@ defaults:
       type: "code"
     values:
       layout: "code"
+      category:
+        - programming
+  -
+    scope:
+      path: ""
+      type: "chords"
+    values:
+      layout: "chords"
+      description: "So much time playing music. Not a minute lost."
+      category:
+        - music
+      tags:
+        - tabs
+        - tablature
