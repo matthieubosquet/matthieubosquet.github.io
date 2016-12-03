@@ -14,4 +14,4 @@ defaults:
       path: ""
       type: "code"
     values:
-      layout: "home"
+      layout: "code"

@@ -2,11 +2,11 @@
 permalink: /code/node-js-basics/
 title: Node.js 101
 category:
-- programming
+  - programming
 tags:
-- node.js
-- javascript
-- serverside
+  - node.js
+  - javascript
+  - serverside
 ---
 
 ## Package.json
@@ -25,7 +25,7 @@ The "Internet System Consortium" is a permissive free software licence.
 Language deemed unnecessary given adoption of the Berne Convention was removed.
 It is meant to be functionally equivalent to the simplified BSD and the MIT licenses.
 
-*ISC license template:*
+*ISC license template:*  
 > ISC License (ISC)
 >
 > Copyright [year(s)], [copyright holder] \<e-mail address>
