@@ -29,7 +29,7 @@ tags:
 ### html.json
 
 {% highlight json %}
-{% gist matthieubosquet/b2eb55a7965c46bcf9b655aa348056af </script>%}
+{% gist matthieubosquet/b2eb55a7965c46bcf9b655aa348056af %}
 {% endhighlight %}
 
 ### javascript.json
