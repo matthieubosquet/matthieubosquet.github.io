@@ -1,6 +1,8 @@
 # Global site config
-title: "Matthieu Bosquet"
+title: "neiges"
+author: "Matthieu Bosquet"
 email: "matthieubosquet@gmail.com"
+description: "I'm a creative web developer, some things I like should end up here ;)"
 
 # Collections (documents sharing a namespace and properties)
 collections:
@@ -9,6 +11,12 @@ collections:
 
 # Defaults (scoped defaults)
 defaults:
+  -
+    scope:
+      path: ""
+      type: ""
+    values:
+      layout: "default"
   -
     scope:
       path: ""
