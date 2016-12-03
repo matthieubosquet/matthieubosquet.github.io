@@ -28,26 +28,9 @@ tags:
 
 ### html.json
 
-{% highlight json %}
-{ test: 'test' }
-{% endhighlight %}
-
-{% gist matthieubosquet/b2eb55a7965c46bcf9b655aa348056af html.json %}
+{% gist matthieubosquet/37f6ce90695e5a6ed62f43a3ee911728 html.json %}
 
 
 ### javascript.json
 
-{% highlight json %}
-{
-	"Service worker": {
-		"prefix": "service",
-		"body": [
-			"if ('serviceWorker' in navigator) {",
-			"    navigator.serviceWorker.register('/sw.js', {scope: '/'});",
-			"}"
-		],
-		"description": "Register a service worker 'sw.js' if the browser supports it. This service worker will control everything from the root of the domain (default scope is './')."
-	}
-
-}
-{% endhighlight %}
+{% gist matthieubosquet/37f6ce90695e5a6ed62f43a3ee911728 javascript.json %}
