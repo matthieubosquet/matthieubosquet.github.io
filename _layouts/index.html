@@ -1,0 +1,20 @@
+---
+layout: body
+stylesheets: 
+    - file: base.css
+      media: all
+---
+
+<div class="page-head">
+    <div class="cover">
+        {% include header.html %}
+        {% if page.cover-badge %}<img src="{{ site.directory.img }}{{ page.cover-badge }}">{% endif %}
+        <div>
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+        </div>
+    </div>
+</div>
+<div class="page-content">
+    {{ content }}
+</div>

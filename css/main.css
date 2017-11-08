@@ -1,0 +1,293 @@
+/**
+ * Margins: 16px
+ * Colors:
+ * - Dark default: hsla(0,0%,0%,0.9)
+ * - Transparent dark: hsla(0,0%,0%,0.77)
+ * - White default: hsla(0, 0%, 100%, 0.9)
+ * - White transparent: hsla(0, 0%, 100%, 0.7)
+ * - Orange strong: hsla(10, 100%, 60%, 0.9)
+ * Shadows:
+ * - Use box-shadow: 1px 3px 4px 0px hsla(0,0%,0%,0.2)
+ * - Play with the 3rd parameter (Blur radius)
+ * Borders:
+ * - 1px solid white or dark
+ */
+
+/** General styles */
+body {
+    color: hsla(0,0%,0%,0.9);
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/** Standard html */
+h1 {
+    background: url("/img/fourmi.jpg") no-repeat fill 0 0 #222;
+    /**color: hsla(210, 80%, 70%, 0.9);*/
+    color: hsla(210, 80%, 100%, 0.87);
+    font-family: 'Dancing Script', cursive;
+    font-size: 90px;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 7em;
+    padding: 64px 16px;
+    text-align: center;
+    text-shadow: 1px 3px 4px hsla(0,0%,0%,0.2);
+}
+h2, h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 16px;
+}
+p, ul {
+    line-height: 1.4em;
+    margin: 16px;
+    max-width: 32em;
+}
+a {
+    color: #78B5F3;
+}
+strong {
+    color: hsla(10, 100%, 60%, 0.9);
+    font-weight: bold;
+}
+
+/** Generic classes */
+.container {
+    padding: 32px 32px 0;
+}
+.container::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+/** Header */
+/** (find a way to fix wrapping menu)
+header .container {
+    padding-right: 0;
+}*/
+#logo {
+    border-right: 1px solid hsla(0,0%,0%,0.9);
+    filter: drop-shadow( 1px 3px 2px hsla(0,0%,0%,0.2) );
+    padding: 16px 32px 48px;
+}
+#logo #blue-hexagon, #logo #green-hexagon, #logo #red-hexagon {
+    will-change: transform;
+}
+#logo #blue-hexagon, #logo #green-hexagon {
+    transform-origin: 50% 50%;
+    transition: all 1300ms;
+}
+#logo #red-hexagon {
+    transform-origin: 50% 50%;
+    animation-name: beat;
+    animation-duration: 1300ms;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+#logo:hover #blue-hexagon {
+    transform: rotate(380deg) scale(0.5, 0.5);
+}
+#logo:hover #green-hexagon {
+    transform: rotate(30deg) scale(0.9, 0.9);
+}
+#logo:hover #red-hexagon {
+    animation-play-state: running;
+}
+@keyframes beat {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.05, 1.05);
+  }
+  50% {
+    transform: scale(0.95, 0.95);
+  }
+  70% {
+    transform: scale(1.06, 1.06);
+  }
+  95% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+#logo, nav, #home-link {
+    float: left;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 16px 0;
+}
+nav ul li {
+    font-size: 24px;
+}
+nav a {
+    color: hsla(0,0%,0%,0.9);
+    display: block;
+    opacity: 0.77;
+    padding: 8px 32px 8px 80px;
+    text-decoration: none;
+    text-shadow: 1px 3px 4px hsla(0,0%,0%,0.2);
+    transform-origin: 50% 100%;
+    transition: all 650ms;
+    will-change: transform;
+}
+nav a:hover {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+}
+.icon {
+    filter: drop-shadow( 1px 3px 2px hsla(0,0%,0%,0.2) );
+    margin-left: -40px;
+    pointer-events: none;
+    position: absolute;
+    width: 1em;
+}
+#page-title {
+    background: url("/img/fourmi.jpg")  no-repeat center center fixed #222;
+    background-size: cover;
+    box-shadow: 1px 3px 16px 0px hsla(0,0%,0%,0.2);
+    margin: 32px 0 0;
+}
+
+/**
+header:after {
+    width:100%;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    left: 0;
+    content: '';
+    background: linear-gradient(to right, #3E4038 0, #6FBF93 33%, #277F7C 66%, #FFF 100%);
+}*/
+
+/** Footer */
+footer {
+    /* background: url("/img/pattern-hive.svg") repeat scroll 0 0 #222; */
+    background-color: #222;
+    box-shadow: 1px 3px 16px 0px hsla(0,0%,0%,0.2);
+    color: hsla(0, 0%, 100%, 0.9);
+    margin-top: 32px;
+    padding-bottom: 32px;
+}
+#about-me {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.9);
+    float: left;
+}
+#profile-picture {
+    height: 144px;
+    border-radius: 50%;
+    margin: 16px;
+    position: absolute;
+    width: 144px;
+}
+#bio {
+    padding-left: 160px;
+}
+#bio h3 span {
+    margin: 6px 0 0 -1.4em;
+    position: absolute;
+}
+#profile-picture, #bio h3 span {
+    box-shadow: 1px 3px 4px 0px hsla(0,0%,0%,0.2);
+}
+
+/** Screen resolution adjustments */
+@media(max-width:480px) {
+    #logo { border: none; }
+    #profile-picture { position: relative; }
+    #bio { padding-left: 0; }
+    #bio h3 span { display: none; }
+}
+
+/**
+
+header:after {
+    width:100%;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    left: 0;
+    content: '';
+    background: linear-gradient(to right, #3E4038 0, #6FBF93 33%, #277F7C 66%, #FFF 100%);
+}
+#header_anim {
+    background-image: radial-gradient(circle farthest-side at center center , rgba(0, 0, 0, 0) 25%, rgba(6, 19, 18, 0.9) 100%);
+    height: 345px;
+    position: relative;
+    top: 0;
+}
+h2 {
+    text-transform: uppercase;
+}
+li {
+    margin-bottom: 8px;
+}
+pre, .gist {
+    background: #171516;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #d7d7d7;
+    font-family: 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 16px;
+    margin: 16px;
+    max-width: 56em;
+    overflow-x: auto;
+    padding: 8px;
+    width: auto;
+}
+#home article {
+    padding: 32px 0;
+}
+#menu {
+    left: 0;
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 1px 0 0 16px;
+    position: absolute;
+    top: 0;
+}
+#menu li {
+    display: block;
+    margin: 0;
+}
+#menu a {
+    border-bottom: 3px solid rgba(255,81,47,0);
+    color: #ddd;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 0 10px;
+    text-decoration: none;
+}
+#menu a:hover {
+    border-bottom-color: rgba(120,181,243,1);
+}
+#linux_toolbox h1 {
+    padding: 64px 0 32px 64px;
+}
+.definition strong {
+    color: #fff;
+}
+.definition span {
+    display: block;
+}
+
+@media(min-width:500px) {
+    h1 { padding-top: 110px; }
+}
+@media(min-width:655px) {
+    h1 { font-size: 110px; padding-top: 110px; }
+}
+@media(min-width:1024px) {
+    h1 { font-size: 138px; }
+    h2, h3 { font-size: 35px; }
+    p, ul, pre { font-size: 20px; }
+}
+*/

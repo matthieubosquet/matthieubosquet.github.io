@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#3E4038">
+    <link rel="icon" sizes="192x192" href="/favicon.png">
+
+    {% if page.font %}
+        {% include google-fonts.html %}
+    {% endif %}
+
+    {% if layout.stylesheets %}
+        {% for stylesheet in layout.stylesheets %}
+            <link rel="stylesheet" media="{{stylesheet.media}}" href="{{site.directory.css}}{{stylesheet.file}}">
+        {% endfor %}
+    {% endif %}
+
+    {% if page.stylesheets %}
+        {% for stylesheet in page.stylesheets %}
+        <link rel="stylesheet" media="{{stylesheet.media}}" href="{{site.directory.css}}{{stylesheet.file}}">
+        {% endfor %}
+    {% endif %}
+
+    <style>
+        .page-head .cover { background: url("/img/profile-autumn.jpg") no-repeat scroll center #222; background-size: cover; }
+    </style>
+
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {%if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}">
+    {%endif %}
+</head>
+{%if page.ascii %}
+<!--
+                 .__
+__  _  __  ____  |  |    ____    ____    _____    ____
+\ \/ \/ /_/ __ \ |  |  _/ ___\  /  _ \  /     \ _/ __ \
+ \     / \  ___/ |  |__\  \___ (  <_> )|  Y Y  \\  ___/
+  \/\_/   \___  >|____/ \___  > \____/ |__|_|  / \___  >
+              \/            \/               \/      \/
+
+... To the code.
+If you were still hesitant,
+I'm sure this splendid ascii art
+just convinced you to get in touch.
+
+Kind regards,
+
+Matthieubosquet@gmail.com
+
+-->
+{%endif %}
+<body>
+
+    {{ content }}
+
+    {% include google-analytics.html %}
+
+</body>
+</html>

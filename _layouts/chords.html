@@ -1,42 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <meta name="theme-color" content="#3E4038">
-    <link rel="icon" sizes="192x192" href="/favicon.png">
+---
+layout: body
+stylesheets: 
+    - file: chords.css
+      media: all
+---
 
-    <style>
-        body { margin: 0; padding: 15px; }
-        h1 { font-family: "DejaVu Serif", serif; font-size: 32px; }
-        .song { font-family: ubuntu, sans-serif; font-size: 16px; }
-        .chorus { padding-left: 15px; }
-        .line, .sentence { display: block; }
-        .line { padding-top: 1em; width: 27em; }
-        .chord { display: inline-block; font-size: 14px; font-weight: bold; }
-        .line .chord { position: relative; top: -1.1em; width: 0; }
-        .artist { font-family: "DejaVu Serif", serif; font-style: italic; margin-top: 2em; }
-        @media print {
-            @page { size: A4 landscape; }
-            body { width: 100%; }
-            h1 { font-size: 24px; }
-            .song { -moz-column-count: 3; -webkit-column-count: 2; columns: 3; font-size: 14px; }
-            .chord { font-size: 12px; }
-        }
-    </style>
+<h1>{{ page.song.title }} {% if page.song.capo %}(Capo {{page.song.capo}}){% endif %}</h1>
 
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    {%if page.tags %}
-    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}">
-    {%endif %}
+<div class="song">
+    {{ content }}
+</div>
 
-</head>
-<body>
+<footer>
+    <p class="artist">{{ page.song.artist }}, {{ page.song.year }}</p>
+</footer>
 
-{{ content }}
-
-</body>
-
-</html>

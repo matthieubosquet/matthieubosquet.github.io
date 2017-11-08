@@ -1,0 +1,19 @@
+/* Humans & colophon */
+
+/* TEAM */                         
+  Author & Web Developer: Matthieu Bosquet
+  Contact: matthieubosquet [at] gmail.com
+  From: Arras, France
+  Location: London, England
+							
+/* THANKS */
+  Friend & Favourite Technical Director: Samu Lang
+  Linkedin: langsamu
+  From: Hungary
+  Location: London, England
+                            
+/* SITE */
+  Language: English
+  Editor: VSCode
+  Hosting: GitHub Pages
+  Version Control: Git

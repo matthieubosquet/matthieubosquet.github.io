@@ -6,12 +6,14 @@ env/
 node_modules/
 serve/
 venv/
+_site/
 
 # Dotfiles
 .*
 !/.gitignore
 !/.editorconfig
 !/.eslintrc
+!/.ruby-version
 
 # Temporary and compiled files
 *~

@@ -1,0 +1,261 @@
+/**
+ * Margins: 16px
+ * Colors:
+ * - Dark default: hsla(0,0%,0%,0.9)
+ * - Transparent dark: hsla(0,0%,0%,0.77)
+ * - White default: hsla(0, 0%, 100%, 0.9)
+ * - White transparent: hsla(0, 0%, 100%, 0.7)
+ * - Orange strong: hsla(10, 100%, 60%, 0.9)
+ * Shadows:
+ * - Use box-shadow: 1px 3px 4px 0px hsla(0,0%,0%,0.2)
+ * - Play with the 3rd parameter (Blur radius)
+ * Borders:
+ * - 1px solid white or dark
+ */
+
+/** General styles */
+body
+{
+    color: hsla(0,0%,0%,0.9);
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+body:before
+{
+    background: linear-gradient(to right, #061312 0, #6FBF93 33%, #277F7C 66%, #FFF 100%);
+    content: '';
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width:100%;
+}
+
+/** Standard html */
+h1
+{
+    font-size: 48px;
+    font-weight: normal;
+    margin: 0;
+}
+h2, h3
+{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 16px;
+}
+p, ul
+{
+    line-height: 1.4em;
+    margin: 16px;
+    max-width: 32em;
+}
+a
+{
+    color: #78B5F3;
+}
+strong
+{
+    color: hsla(10, 100%, 60%, 0.9);
+    font-weight: bold;
+}
+
+/** Nav */
+nav
+{
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+nav ul
+{
+    line-height: 2.2em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li
+{
+    display: inline-block;
+}
+nav ul li a
+{
+    display: block;
+    margin-left: 4px;
+    padding: 23px 16px 16px 15px;
+    text-decoration: none;
+    transition: all 300ms;
+    will-change: transform;
+}
+nav ul li a:hover
+{
+    text-shadow: 1px 3px 4px hsla(0,0%,0%,0.6);
+}
+nav ul li a span
+{
+    padding: 0 0 0 53px;
+}
+#logo
+{
+    filter: drop-shadow( 1px 2px 2px hsla(0,0%,0%,0.2) );
+    margin: -20px -16px;
+    padding: 13px 95px 10px 15px;
+    position: absolute;
+}
+#logo #blue-hexagon, #logo #green-hexagon, #logo #red-hexagon
+{
+    will-change: transform;
+}
+#logo #blue-hexagon, #logo #green-hexagon
+{
+    transform-origin: 50% 50%;
+    transition: all 1300ms;
+}
+#logo #red-hexagon
+{
+    transform-origin: 50% 50%;
+    animation-name: beat;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+#logo:hover #blue-hexagon
+{
+    transform: rotate(480deg) scale(0.33, 0.33);
+}
+#logo:hover #green-hexagon
+{
+    transform: rotate(30deg) scale(0.66, 0.66);
+}
+#logo:hover #red-hexagon
+{
+    animation-play-state: running;
+}
+@keyframes beat
+{
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.05, 1.05);
+  }
+  45% {
+    transform: scale(0.95, 0.95);
+  }
+  70% {
+    transform: scale(1.06, 1.06);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+#search
+{
+    vertical-align: middle;
+}
+
+/** Head */
+.page-head
+{
+    background: url("/img/pattern-dotted.svg") repeat scroll 0 0 #222;
+    box-shadow: 1px 4px 16px 0px hsla(0,0%,0%,0.2);
+    text-align: center;
+    text-shadow: 1px 2px 4px hsla(0,0%,0%,0.8);
+}
+.page-head .cover
+{
+    background-image: radial-gradient(circle farthest-side at center center , rgba(0, 0, 0, 0) 2%, rgba(6, 19, 18, 0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+}
+.page-head .cover div
+{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 2%, rgba(0, 0, 0, 0.3) 100%);
+}
+.page-head img
+{
+    border-radius: 50%;
+    height: 96px;
+    display: block;
+    margin: -8px auto;
+    box-shadow: 1px 2px 4px hsla(0,0%,0%,0.8);
+}
+.page-head h1
+{
+    color: hsla(210, 80%, 100%, 0.9);
+    font-weight: bold;
+    padding: 8px 16px 0px 15px;
+}
+.page-head p
+{
+    margin: 0 auto;
+    text-align: center;
+    color: #EEE;
+}
+.page-head a
+{
+    color: hsla(210, 80%, 100%, 1);
+}
+.page-head svg path
+{
+    fill: hsla(210, 80%, 100%, 0.9);
+}
+.page-head a:hover
+{
+    color: hsla(210, 80%, 100%, 1);
+}
+/** Content */
+.contents {
+    background: url("/img/pattern-dotted.svg") repeat scroll 0 0 #222;
+    box-shadow: 1px 4px 16px 0px hsla(0,0%,0%,0.2);
+}
+.contents ul, .contents ol {
+    color: #78B5F3;
+    margin: 0;
+    padding: 15px 16px 16px 47px;
+    transition: color 300ms;
+    will-change: color;
+}
+.contents ul a, .contents ol a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/** Footer
+footer {
+    background: url("/img/pattern-hive.svg") repeat scroll 0 0 #222;
+    background-color: #222;
+    box-shadow: 1px 3px 16px 0px hsla(0,0%,0%,0.2);
+    color: hsla(0, 0%, 100%, 0.9);
+    margin-top: 32px;
+    padding-bottom: 32px;
+}
+#about-me {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.9);
+    float: left;
+}
+#profile-picture {
+    height: 144px;
+    border-radius: 50%;
+    margin: 16px;
+    position: absolute;
+    width: 144px;
+}
+#bio {
+    padding-left: 160px;
+}
+#bio h3 span {
+    margin: 6px 0 0 -1.4em;
+    position: absolute;
+}
+#profile-picture, #bio h3 span {
+    box-shadow: 1px 3px 4px 0px hsla(0,0%,0%,0.2);
+} */

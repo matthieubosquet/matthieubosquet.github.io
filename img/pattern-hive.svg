@@ -1,0 +1,13 @@
+<svg id="pattern" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <pattern id="hatch" width="14" height="24" patternUnits="userSpaceOnUse">
+        <rect width="14" height="24" fill='#333333'/>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="test_hexa" transform="translate(-0.5, 0)" stroke="#232323">
+                <polyline id="Shape" points="7 16.5 0 12.5 0 4 7 0 14 4 14 12.5 7 16.5 7 24"></polyline>
+            </g>
+        </g>
+    </pattern>
+  </defs>
+  <rect fill="url(#hatch)" x="0" y="0" width="100%" height="100%"/>
+</svg>

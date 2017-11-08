@@ -1,43 +1,15 @@
 # Global site config
-lang: en
-title: "neiges"
 author: "Matthieu Bosquet"
+description: "Hello, neig.es is a place to share thoughts on some of the things I'm interested in like tech, music & art. Matthieu."
 email: "matthieubosquet@gmail.com"
-description: "I'm a creative web developer, some things I like should end up here ;)"
+lang: "en"
+title: "neiges"
 google_analytics_tracking_id: UA-20728275-2
 
-# Collections (documents sharing a namespace and properties)
-collections:
-  code:
-    output: true
-  chords:
-    output: true
+# Directory configuration
+directory:
+  css: "/css/"
+  img: "/img/"
 
-# Defaults (scoped defaults type point to a namespace, values overrides global defaults)
-defaults:
-  -
-    scope:
-      path: ""
-      type: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "code"
-    values:
-      layout: "code"
-      category:
-        - programming
-  -
-    scope:
-      path: ""
-      type: "chords"
-    values:
-      layout: "chords"
-      description: "So much time playing music. Not a minute lost."
-      category:
-        - music
-      tags:
-        - tabs
-        - tablature
+# Exclude from Jekyll build
+exclude: ["CNAME", "Gemfile", "Gemfile.lock", "Makefile", "README.md", "/asset/css/style.css"]
