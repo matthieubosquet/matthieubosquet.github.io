@@ -1,6 +1,6 @@
 ---
 layout: index
-permalink: /
+permalink: /old2
 subtitle: Creative Web Developer passionate about Art, Tech, UX, Data
 tags: ["programming", "music", "experiments"]
 title: Matthieu Bosquet
