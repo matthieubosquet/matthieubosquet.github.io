@@ -60,7 +60,7 @@ tags: ["web developer", "hire", "london", "data science", "data visualisation"]
     <p>
         You think I can help with your project? Write me an email. I will get back to you. <strong>matthieubosquet@gmail.com</strong>
     </p>
-    <p><abbr title="nota bene">n.b.</abbr> <a href="http://www.neig.es" title="Matthieu Bosquet's personal website">neig.es</a> is hosted on <a href="https://github.com/matthieubosquet" title="Matthieu Bosquet's Github account">Github</a>.</p>
+    <p><abbr title="nota bene">n.b.</abbr> <a href="https://www.neig.es" title="Matthieu Bosquet's personal website">neig.es</a> is hosted on <a href="https://github.com/matthieubosquet" title="Matthieu Bosquet's Github account">Github</a>.</p>
 </footer>
 
 <script type="text/javascript">
