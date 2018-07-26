@@ -2,7 +2,7 @@
 ascii: true
 font: true
 layout: body
-permalink: K7jvHziDzwX9
+permalink: /
 title: Hire Matt! A good web developer.
 description: Hello, my name is Matthieu I'm a Web Developer living and working in London. Interested in tech, data, AI, music and art. Don't hesitate to drop me a line.
 stylesheets:
